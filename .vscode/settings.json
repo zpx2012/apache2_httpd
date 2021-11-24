@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "http_protocol.h": "c",
+        "http_core.h": "c"
+    }
+}
