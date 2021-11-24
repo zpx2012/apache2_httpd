@@ -165,18 +165,18 @@ Release
 /docs/manual/vhosts/*.aux
 
 # /include/
-/include/ap_config_auto.h
-/include/ap_config_auto.h.in
-/include/ap_config_layout.h
-/include/ap_ldap.h
-/include/mod_cgi.h
-/include/mod_dav.h
-/include/mod_include.h
-/include/mod_proxy.h
-/include/mod_so.h
-/include/mpm.h
-/include/mpm_default.h
-/include/os.h
+#/include/ap_config_auto.h
+#/include/ap_config_auto.h.in
+#/include/ap_config_layout.h
+#/include/ap_ldap.h
+#/include/mod_cgi.h
+#/include/mod_dav.h
+#/include/mod_include.h
+#/include/mod_proxy.h
+#/include/mod_so.h
+#/include/mpm.h
+#/include/mpm_default.h
+#/include/os.h
 
 # /modules/aaa/
 
