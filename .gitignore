@@ -300,8 +300,8 @@ Release
 
 # /srclib/
 /srclib/pth
-/srclib/apr
-/srclib/apr-util
+#/srclib/apr
+#/srclib/apr-util
 /srclib/apr-iconv
 /srclib/distcache
 /srclib/lua
