@@ -19,7 +19,6 @@
 *.stt
 *.sto
 *.mak
-Makefile
 modules.mk
 BuildLog.htm
 Debug
