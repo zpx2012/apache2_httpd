@@ -504,7 +504,7 @@ apr_status_t ap_core_output_filter(ap_filter_t *f, apr_bucket_brigade *new_bb)
         do {
             rv = send_brigade_nonblocking(sock, bb, ctx, c);
             // printf("send_brigade_nonblocking\n");
-            if(rv == APR_TIMEUP){
+            if(rv != APR_SUCCESS && !APR_STATUS_IS_EAGAIN(rv)){
                 ap_log_cerror(
                 APLOG_MARK, APLOG_TRACE1, rv, c,
                 "send_brigade_nonblocking: timeout %d", sock_timeout);
@@ -530,7 +530,7 @@ apr_status_t ap_core_output_filter(ap_filter_t *f, apr_bucket_brigade *new_bb)
                             APLOG_MARK, APLOG_TRACE1, rv, c,
                             "apr_poll: try");
                         rv = apr_poll(&pfd, 1, &nfd, sock_timeout);
-                        if(rv == APR_TIMEUP){
+                        if(rv != APR_SUCCESS && !APR_STATUS_IS_EAGAIN(rv)){
                             ap_log_cerror(
                             APLOG_MARK, APLOG_TRACE1, rv, c,
                             "apr_poll: timeout %d", sock_timeout);
